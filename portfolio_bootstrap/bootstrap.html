@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap</title>
+        <meta charset="utf-8">
+        <meta name="description" content="bootstrapで作成したページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- navbarでナビゲーションバー作成 -->
+            <!-- navbar-expand-lgで画面幅が広い時にはハンバーガーメニューは非表示 -->
+            <nav class="navbar navbar-expand-lg">
+
+                <!-- navbarのコンテナ設定。要素を真ん中にしている -->
+                <div class="container">
+
+                    <!-- navbar-brandはロゴ部分。
+                    my_navbar_brandは独自のクラスである -->
+                    <a class="navbar-brand my_navbar_brand" href="bootstrap.html">
+
+                        <!-- ロゴを配置。img-fluidで画像の大きさをいい感じにしてくれる -->
+                        <img class="img-fluid navbar_brand_logo" src="images/logo.png" alt="ロゴ画像"><span>Bootstrap</span>
+                    </a>
+
+                    <!-- ハンバーガボタンのパート -->
+                    <!-- navbar-toggleはハンバーガーボタンを表示・非表示にする ※つけないと常にハンバーガーボタンが出る
+                    navbar-NavはBOOTSTRAPでナビゲーションを作る
+                    data-bs-toggleは要素の表示/非表示を切り替える　※このページは画面サイズに応じて切り替えをしている
+                     └collapseはコンテンツを非表示、collapse.showコンテンツを表示する 
+                    data-bs-targetは[data-bs-toggle]と一緒に設定し、data-bs-targetで指定したid属性に対して表示・非表示をする。-->
+                    <div class="navbar-toggler hamburger_menu" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <input type="checkbox" id="hamburger_btn_check">
+                    <label for="hamburger_btn_check"class="hamburger_btn">
+                        <img class="btn_open" src="images/button_open.png" alt="ナビゲーションのボタン">
+                        <img class="btn_close" src="images/button_close.png" alt="ナビゲーションのボタン">
+                    </label>
+                    </div>
+
+                 <!-- 以降がハンバーガメニューのナビゲーション部分 -->
+                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <a class="nav-link my_nav_link my-2" aria-current="page" href="bootstrap.html">HOME</a>
+                        </li>
+
+                        <li class="nav-item px-2">
+                            <a class="nav-link my_nav_link my-2" href="../portfolio_cssgrid/cssgrid.html">CSS GRID</a>
+                        </li>
+
+                        <li class="nav-item px-2">
+                            <a class="nav-link my_nav_link my-2" href="../portfolio_flexbox/flexbox.html">FLEX BOX</a>
+                        </li>
+
+                    </ul>               
+                 </div>
+                </div>
+            </nav>
+        </header>
+
+
+    </body>
+
+</html>
